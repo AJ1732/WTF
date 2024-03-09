@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import Button from "./layout/Button"
 import Rating from "./Rating"
 
@@ -10,6 +11,8 @@ const spanStyle = {
 }
 
 function ReviewForm({handleAdd}) {
+    const navigate = useNavigate()
+
     // state for input text 
   const [text, setText] = useState('')
 
@@ -62,7 +65,7 @@ const formSubmit = (e) => {
                 <div className="input-group">
                     <input type="text" value={text} placeholder="write your review here" onChange={textHandler} />
                     
-                    <Button type='submit' variant='secondary' isDisabled={btnDisabled}>
+                    <Button type='submit' variant='secondary' isDisabled={btnDisabled} onClick={() => navigate("/allreviews")}>
                         Submit
                     </Button>
                 </div>
