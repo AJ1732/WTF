@@ -10,13 +10,6 @@ function Review() {
   const [review, setReview] = useState(data);
   const navigate = useNavigate()
 
-  
-  // //  function to add a review
-  // const AddReview = (newReview) => {
-  //   newReview.id = uuid()
-  //   setReview([newReview, ...review])
-  // }
-
   return (
     <>
       <ReviewForm />
