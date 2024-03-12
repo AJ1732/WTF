@@ -1,8 +1,8 @@
 import { FaTimes } from "react-icons/fa"
+import { useReviewContext } from "../Context/ReviewContext"
 
-function ReviewItem({review, deleteReview}) {
-
-
+function ReviewItem({ review }) {
+  const { deleteReview } = useReviewContext();
 
   return (
     <>

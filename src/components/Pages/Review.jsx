@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
-import { v4 as uuid } from 'uuid'; 
 import data from "../../data/reviewData"
 import ReviewForm from "../ReviewForm";
 import { FaHouseDamage } from "react-icons/fa";
@@ -12,15 +11,15 @@ function Review() {
   const navigate = useNavigate()
 
   
-  //  function to add a review
-  const AddReview = (newReview) => {
-    newReview.id=uuid()
-    setReview([newReview, ...review])
-  }
+  // //  function to add a review
+  // const AddReview = (newReview) => {
+  //   newReview.id = uuid()
+  //   setReview([newReview, ...review])
+  // }
 
   return (
     <>
-      <ReviewForm handleAdd={AddReview} />
+      <ReviewForm />
       <div className="container">
         <Button type='button' variant='secondary' onClick={() => navigate("/allreviews")}>
             See All Reviews
