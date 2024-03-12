@@ -1,10 +1,12 @@
+import { useReviewContext } from "../Context/ReviewContext"
 
 
-function ReviewStats({reviews}) {
-    // sum of the total reviews rating and divided by the total length of the array and the output is converted to a single decimal place.
+function ReviewStats() {
+  // sum of the total reviews rating and divided by the total length of the array and the output is converted to a single decimal place.
+  const { reviews } = useReviewContext();
 
-    let average = (reviews.reduce((acc, cur) => {
-        return acc + cur.rating}, 0)/reviews.length).toFixed(1)
+  let average = (reviews.reduce((acc, cur) => {
+      return acc + cur.rating}, 0)/reviews.length).toFixed(1)
 
   return (
     <>
